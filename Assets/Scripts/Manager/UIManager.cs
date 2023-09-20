@@ -4,14 +4,9 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-
-    void Awake()
+    private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        instance = this;
     }
 
     public void LoadScene(string sceneName)
