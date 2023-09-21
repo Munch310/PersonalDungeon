@@ -31,7 +31,7 @@ public class PlayerUI : MonoBehaviour
         playerName.text = playerData.playerName.ToString();
         playerDesciotion.text = playerData.playerDescription.ToString();
         int gold = playerData.gold;
-        string formattedGold = gold.ToString("N0"); // 숫자를 세 자리마다 쉼표로 구분하여 포맷
+        string formattedGold = gold.ToString("N0");
         playerGold.text = formattedGold;
     }
 }

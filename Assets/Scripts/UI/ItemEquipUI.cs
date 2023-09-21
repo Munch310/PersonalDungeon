@@ -30,27 +30,20 @@ public class ItemEquipUI : MonoBehaviour
 
             if (playerData != null)
             {
-                UpdatePlayerData(); // playerData를 설정한 후 업데이트
+                UpdatePlayerData();
             }
         }
     }
 
-
-    // 아이템 장착 버튼을 눌렀을 때 호출되는 메서드
     public void EquipItem()
     {
         if (selectedItem != null)
         {
-            // 아이템의 보너스를 플레이어 데이터에 적용
             playerData.atkValue += selectedItem.atkBonus;
             playerData.defValue += selectedItem.defBonus;
             playerData.health += selectedItem.healthBonus;
             playerData.criticalValue += selectedItem.criticalBonus;
 
-            // 아이템 가격을 골드에서 차감
-            playerData.gold -= selectedItem.gold;
-
-            // 플레이어 데이터를 업데이트
             UpdatePlayerData();
 
             Debug.Log("장착된 아이템: " + selectedItem.name);
@@ -60,15 +53,12 @@ public class ItemEquipUI : MonoBehaviour
             Debug.Log("아무 아이템도 선택되지 않았습니다.");
         }
     }
-
-    // 다른 스크립트에서 선택한 아이템을 설정하는 메서드
     public void SetSelectedItem(ItemProperty item)
     {
         selectedItem = item;
         UpdateUI();
     }
 
-    // UI를 업데이트하는 메서드
     private void UpdateUI()
     {
         if (selectedItem != null)
@@ -97,13 +87,6 @@ public class ItemEquipUI : MonoBehaviour
 
     private void UpdatePlayerData()
     {
-        // 플레이어 데이터를 업데이트한 후, StatusUI와 PlayerUI에 변경된 데이터를 전달하여 UI를 업데이트합니다.
-        StatusUI statusUI = FindObjectOfType<StatusUI>();
-        if (statusUI != null)
-        {
-            statusUI.SetStatusValues(playerData);
-        }
-
         PlayerUI playerUI = FindObjectOfType<PlayerUI>();
         if (playerUI != null)
         {

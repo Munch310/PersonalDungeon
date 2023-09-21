@@ -47,6 +47,6 @@ public class StatusUI : MonoBehaviour
         atkText.text = playerData.atkValue.ToString();
         defText.text = playerData.defValue.ToString();
         healthText.text = playerData.health.ToString();
-        criticalText.text = (playerData.criticalValue * 100.0f).ToString("F1") + "%";
+        criticalText.text = (playerData.criticalValue * 10.0f).ToString("F1") + "%";
     }
 }
