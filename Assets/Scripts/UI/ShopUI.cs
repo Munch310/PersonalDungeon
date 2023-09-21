@@ -14,7 +14,7 @@ public class ShopUI : MonoBehaviour
 
     public Action<ItemProperty> OnSlotClick;
 
-    void Start()
+    void Awake()
     {
         Slots = new List<Slot>();
 

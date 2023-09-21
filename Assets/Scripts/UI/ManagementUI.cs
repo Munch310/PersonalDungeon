@@ -13,7 +13,7 @@ public class ManagementUI : MonoBehaviour
     [SerializeField] private GameObject InventoryBtn;
     [SerializeField] private GameObject ShopBtn;
 
-    private void Start()
+    private void Awake()
     {
         if (ManagementUIHandler.instance != null)
         {

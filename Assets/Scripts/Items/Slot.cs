@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+// Slot.cs
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +10,17 @@ public class Slot : MonoBehaviour
     public Image image;
     public Button sellBtn;
 
+    private InventoryUI inventoryUI;
+
     private void Awake()
     {
         SetSellBtnInteractable(false);
+        inventoryUI = GetComponentInParent<InventoryUI>();
+
+        if (sellBtn != null)
+        {
+            sellBtn.onClick.AddListener(OnClickSellBtn);
+        }
     }
 
     void SetSellBtnInteractable(bool b)
@@ -29,7 +35,7 @@ public class Slot : MonoBehaviour
     {
         this.item = item;
 
-        if(item == null)
+        if (item == null)
         {
             image.enabled = false;
             SetSellBtnInteractable(false);
@@ -48,5 +54,13 @@ public class Slot : MonoBehaviour
     public void OnClickSellBtn()
     {
         SetItem(null);
+    }
+
+    public void OnClickSlot()
+    {
+        if (item != null)
+        {
+            inventoryUI.SendSelectedItemToItemEquipUI(item);
+        }
     }
 }

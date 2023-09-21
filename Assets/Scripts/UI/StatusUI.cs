@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -11,21 +12,35 @@ public class StatusUI : MonoBehaviour
 
     private PlayerSO playerData;
 
-    private void Awake()
+    private void OnEnable()
     {
-        PlayerStatHandler playerStatHandler = FindObjectOfType<PlayerStatHandler>();
+        StartCoroutine(UpdateStatusUI());
+    }
 
-        if (playerStatHandler != null)
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    private IEnumerator UpdateStatusUI()
+    {
+        while (true)
         {
-            playerData = playerStatHandler.playerData;
+            yield return null;
 
-            if (playerData != null)
+            PlayerStatHandler playerStatHandler = FindObjectOfType<PlayerStatHandler>();
+
+            if (playerStatHandler != null)
             {
-                SetStatusValues(playerData);
+                playerData = playerStatHandler.playerData;
+
+                if (playerData != null)
+                {
+                    SetStatusValues(playerData);
+                }
             }
         }
     }
-
 
     public void SetStatusValues(PlayerSO playerData)
     {

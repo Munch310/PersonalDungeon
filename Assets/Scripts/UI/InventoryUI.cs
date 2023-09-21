@@ -1,4 +1,4 @@
-using System.Collections;
+// InventoryUI.cs
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,10 +7,13 @@ public class InventoryUI : MonoBehaviour
 {
     public Transform rootSlot;
     public ShopUI shopUI;
+    public ItemEquipUI itemEquipUI;
+
+    public GameObject itemEqupUIGO;
 
     private List<Slot> slots;
 
-    void Start()
+    void Awake()
     {
         slots = new List<Slot>();
 
@@ -33,4 +36,12 @@ public class InventoryUI : MonoBehaviour
         emptySlot?.SetItem(item);
     }
 
+    public void SendSelectedItemToItemEquipUI(ItemProperty item)
+    {
+        itemEquipUI.SetSelectedItem(item);
+        if(UIManager.instance != null)
+        {
+            UIManager.instance.SetGameObjectActive(itemEqupUIGO, true);
+        }
+    }
 }
