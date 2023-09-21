@@ -51,7 +51,13 @@ public class ManagementUI : MonoBehaviour
 
     private void HandleShopBtnClick()
     {
-        Debug.Log("Shop Button Clicked!");
+        if (UIManager.instance != null)
+        {
+            UIManager.instance.SetGameObjectActive(ShopUI, true);
+            UIManager.instance.SetGameObjectActive(StatusBtn, false);
+            UIManager.instance.SetGameObjectActive(InventoryBtn, false);
+            UIManager.instance.SetGameObjectActive(ShopBtn, false);
+        }
     }
 
     private void OnDestroy()

@@ -1,40 +1,36 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    Inventory inven;
+    public Transform rootSlot;
+    public ShopUI shopUI;
 
-    public Slot[] slots;
-    public Transform slotHolder;
+    private List<Slot> slots;
 
-    private void Start()
+    void Start()
     {
-        inven = Inventory.instance;
-        slots = slotHolder.GetComponentsInChildren<Slot>();
-        inven.onSlotCountChange += SlotChange;
-}
+        slots = new List<Slot>();
 
-    private void SlotChange(int val)
-    {
-        for(int i = 0; i < slots.Length; i++)
+        int slotCnt = rootSlot.childCount;
+
+        for (int i = 0; i < slotCnt; i++)
         {
-            if (i < inven.SlotCnt)
-            {
-                slots[i].GetComponent<Button>().interactable = true;
-            }
-            else
-            {
-                slots[i].GetComponent<Button>().interactable = false;
-            }
+            var slot = rootSlot.GetChild(i).GetComponent<Slot>();
+
+            slots.Add(slot);
         }
+
+        shopUI.OnSlotClick += BuyItem;
     }
 
-    public void AddSlot()
+    void BuyItem(ItemProperty item)
     {
-        inven.SlotCnt++;
+        var emptySlot = slots.FirstOrDefault(t => t.item == null || t.item.name == string.Empty);
+
+        emptySlot?.SetItem(item);
     }
+
 }
