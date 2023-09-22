@@ -1,4 +1,3 @@
-// Slot.cs
 using UnityEngine;
 using UnityEngine.UI;
 
