@@ -24,7 +24,7 @@ Unity를 이용한 Dodge like
 - https://penzilla.itch.io/vector-icon-pack
 
 ## 📌 Main Functions
-### UI - <a href="https://github.com/NBCampUnityA05/SaveTheUndead/wiki/1-%E2%80%90-GameManger" >상세보기 - WIKI 이동</a>
+### UI - <a href="https://github.com/Munch310/PersonalDungeon/wiki/1.-UI" >상세보기 - WIKI 이동</a>
 
 ### Player - <a href="https://github.com/NBCampUnityA05/SaveTheUndead/wiki/2-%E2%80%90-PlayerManager" >상세보기 - WIKI 이동</a>
 
