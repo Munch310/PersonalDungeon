@@ -35,9 +35,9 @@
 ## 📌 Main Functions
 ### UI - <a href="https://github.com/Munch310/PersonalDungeon/wiki/1.-UI" >상세보기 - WIKI 이동</a>
 
-### Player - <a href="https://github.com/NBCampUnityA05/SaveTheUndead/wiki/2-%E2%80%90-PlayerManager" >상세보기 - WIKI 이동</a>
+### Player - <a href="https://github.com/Munch310/PersonalDungeon/wiki/2.-Player" >상세보기 - WIKI 이동</a>
 
-### Items - <a href="https://github.com/NBCampUnityA05/SaveTheUndead/wiki/3-%E2%80%90-LifeManager" >상세보기 - WIKI 이동</a>
+### Item - <a href="https://github.com/Munch310/PersonalDungeon/wiki/3.-Item" >상세보기 - WIKI 이동</a>
 
 ## 🎮 Play Video
 <img src="https://github.com/Munch310/PersonalDungeon/assets/84183932/99dde02d-95d3-45d7-88cc-b8f64c3ef711" sytle="width:64px">
