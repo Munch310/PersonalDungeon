@@ -31,6 +31,5 @@ Unity를 이용한 Dodge like
 ### Items - <a href="https://github.com/NBCampUnityA05/SaveTheUndead/wiki/3-%E2%80%90-LifeManager" >상세보기 - WIKI 이동</a>
 
 ## 🎮 Play Video
-<img src="https://github.com/Munch310/PersonalDungeon/assets/84183932/99dde02d-95d3-45d7-88cc-b8f64c3ef711" style="width:200px">
+<img src="https://github.com/Munch310/PersonalDungeon/assets/84183932/99dde02d-95d3-45d7-88cc-b8f64c3ef711">
 </img>
-![Movie_001](https://github.com/Munch310/PersonalDungeon/assets/84183932/99dde02d-95d3-45d7-88cc-b8f64c3ef711)
