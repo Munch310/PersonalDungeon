@@ -17,7 +17,7 @@
 ## 🕰️ Development Period
 * 23.09.20 ~ 23.09.22
 
-### 🧑‍🤝‍🧑 Member
+### 🧑‍🤝‍🧑 Maker
  - 문현우
 
 ### ⚙️ Development Environment
