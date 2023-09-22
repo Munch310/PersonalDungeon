@@ -1,9 +1,18 @@
 # PersonalDungeon
 ## 🖥️ Project Introduction
+스파르타 던전 - Unity  버전!
 
+## 💗 Project Summary
+- 필수 기능 구현
+1. 메인 화면 구성
+2. Status
+3. Inventory
 
-Unity를 이용한 Dodge like
-<br>
+- 선택 기능 구현
+1. 아이템 장착
+2. 상점 기능
+3. 상점 버튼 추가
+4. 구매 아이템 인벤토리 추가
 
 ## 🕰️ Development Period
 * 23.09.20 ~ 23.09.22
