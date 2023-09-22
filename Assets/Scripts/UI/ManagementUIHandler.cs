@@ -16,7 +16,6 @@ public class ManagementUIHandler : MonoBehaviour
 
     public void HandleStatusBtnClick()
     {
-        Debug.Log("감지 완료! 이제 ManagementUI.cs로 넘어갑니다!");
         OnStatusBtnClicked?.Invoke();
     }
 

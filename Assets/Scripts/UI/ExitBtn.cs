@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ExitStatusBtn : MonoBehaviour
+public class ExitBtn : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private GameObject statusUI;

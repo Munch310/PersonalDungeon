@@ -8,10 +8,8 @@ using UnityEngine.UI;
 
 public class ShopUI : MonoBehaviour
 {
-    private PlayerSO playerData;
-
     public ItemBuffer itemBuffer;
-    public Transform slotRoot;
+    [SerializeField] private Transform slotRoot;
 
     private List<Slot> Slots;
 

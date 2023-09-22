@@ -45,8 +45,6 @@ public class ItemEquipUI : MonoBehaviour
             playerData.criticalValue += selectedItem.criticalBonus;
 
             UpdatePlayerData();
-
-            Debug.Log("장착된 아이템: " + selectedItem.name);
         }
         else
         {

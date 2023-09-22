@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    public Transform rootSlot;
+    [SerializeField] private Transform rootSlot;
     public ShopUI shopUI;
     public ItemEquipUI itemEquipUI;
 
-    public GameObject itemEqupUIGO;
+    [SerializeField] private GameObject itemEquipGO;
 
     private List<Slot> slots;
 
@@ -40,7 +40,7 @@ public class InventoryUI : MonoBehaviour
         itemEquipUI.SetSelectedItem(item);
         if(UIManager.instance != null)
         {
-            UIManager.instance.SetGameObjectActive(itemEqupUIGO, true);
+            UIManager.instance.SetGameObjectActive(itemEquipGO, true);
         }
     }
 }

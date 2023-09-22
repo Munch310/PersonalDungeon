@@ -7,8 +7,8 @@ public class Slot : MonoBehaviour
     [HideInInspector]
     public ItemProperty item;
 
-    public Image image;
-    public Button sellBtn;
+    [SerializeField] private Image image;
+    [SerializeField] private Button sellBtn;
 
     private InventoryUI inventoryUI;
 
